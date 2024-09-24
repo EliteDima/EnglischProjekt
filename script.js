@@ -1,6 +1,16 @@
-// JavaScript can be used to add interactivity or handle form submissions, animations, etc.
-// Here is a basic alert example
+// JavaScript to handle button actions and interactivity
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Welcome to DataTech - Your trusted partner in IT solutions");
+// Show an alert when a form is submitted
+function submitForm() {
+    alert("Your message has been submitted successfully!");
+}
+
+// Handle smooth scrolling for links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
